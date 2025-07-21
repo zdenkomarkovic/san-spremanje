@@ -14,7 +14,7 @@ import Hero2 from "../public/hero2.jpg";
 import Hero3 from "../public/hero3.jpg";
 
 import Image from "next/image";
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRightIcon, PhoneIcon } from "lucide-react";
 
 import Link from "next/link";
 
@@ -40,21 +40,21 @@ const Hero = () => {
           <CarouselItem>
             <Image
               src={Hero1}
-              alt="Moderna dnevna soba"
+              alt="Profesionalno čišćenje stanova i kuća"
               className="w-full h-[100dvh] object-cover"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               src={Hero2}
-              alt="Elegantna dnevna soba"
+              alt="Čišćenje poslovnih prostora i lokala"
               className="w-full h-[100dvh] object-cover"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               src={Hero3}
-              alt="Luksuzni plakar"
+              alt="Čišćenje posle adaptacija i renoviranja"
               className="w-full h-[100dvh] object-cover"
             />
           </CarouselItem>
@@ -62,29 +62,34 @@ const Hero = () => {
       </Carousel>
       <div className="relative flex flex-col gap-6 w-full items-center justify-center text-white z-[1] text-center">
         <h1 className="text-primary md:text-[4rem] text-xl font-bold max-w-[900px] leading-[1.2] px-4">
-          NASLOV
+          San Spremanje
         </h1>
         <h2 className="text-background font-medium md:text-[1.5rem] text-md max-w-[800px] px-4">
-          PRATECI TEXT
+          Jer sve počinje sa čistoćom! Profesionalno čišćenje bez kompromisa
         </h2>
+        <p className="text-background/90 font-medium md:text-[1.2rem] text-sm max-w-[700px] px-4">
+          Spremamo sve što vi ne stižete: stanove, kuće, lokale, poslovne prostore, 
+          prostorije posle adaptacije i novogradnju
+        </p>
         <div className="flex flex-col gap-4 md:flex-row">
-          <Link href="/proizvodi">
+          <Link href="/usluge">
             <motion.button
               whileHover={{ translateY: "-5px" }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2 bg-primary text-foreground px-4 py-2 md:px-8 md:py-3 rounded-lg font-medium"
             >
-              Istražite naše proizvode
+              Naše usluge
               <ArrowRightIcon className="w-[18px]" />
             </motion.button>
           </Link>
-          <a href="tel:+3816000000">
+          <a href="tel:+381656088870">
             <motion.button
               whileHover={{ translateY: "-5px" }}
               whileTap={{ scale: 0.95 }}
-              className="bg-transparent border-background border-[1px] rounded-lg px-4 md:px-8 md:py-3 py-2 font-medium"
+              className="flex items-center gap-2 bg-transparent border-background border-[1px] rounded-lg px-4 md:px-8 md:py-3 py-2 font-medium"
             >
-              Pozovite odmah
+              <PhoneIcon className="w-[18px]" />
+              065 608 8870
             </motion.button>
           </a>
         </div>
