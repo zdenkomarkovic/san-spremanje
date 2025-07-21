@@ -137,7 +137,7 @@ const TestemonialCard = ({ testimonial }: { testimonial: TestimonialData }) => {
         <CardContent className="pt-0">
           <div className="relative">
             <p className="text-gray-600 leading-relaxed text-sm md:text-base italic">
-              "{testimonial.description}"
+            &quot;{testimonial.description}&quot;
             </p>
           </div>
           

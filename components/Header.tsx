@@ -159,14 +159,14 @@ export default function Header() {
       }  fixed top-0 left-0 right-0 z-[10] transition-colors`}
     >
       <nav className="flex items-center justify-between px-8 py-4 max-w-[80rem] w-full text-primary font-bold">
-        <Link href="/" className="">
+        <Link href="/" className="flex items-center gap-2">
           <Image
             src={Logo}
             alt="San Spremanje"
             width={50}
             height={50}
             className="rounded-full"
-          />
+          /> San Spremanje
         </Link>
         <DesktopNav />
         <Link href="tel:+381656088870">

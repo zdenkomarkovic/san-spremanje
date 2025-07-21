@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FaBroom, FaHome, FaBuilding, FaTools, FaStar } from "react-icons/fa";
+import { FaBroom, FaHome, FaBuilding, FaStar } from "react-icons/fa";
 import { uslugeData } from "@/constants";
 
 export const metadata: Metadata = {
