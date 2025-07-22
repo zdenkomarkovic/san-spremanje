@@ -17,13 +17,13 @@ const Hero = () => {
         priority
       />
       <div className="relative flex flex-col gap-6 w-full items-center justify-center text-white z-[1] text-center">
-        <h1 className="text-primary md:text-[4rem] text-xl font-bold max-w-[900px] leading-[1.2] px-4">
+        <h1 className="">
           San Spremanje
         </h1>
-        <h2 className="text-background font-medium md:text-[1.5rem] text-md max-w-[800px] px-4">
+        <h2 className="text-background font-medium md:text-[1.5rem] text-lg max-w-[800px] px-4">
           Jer sve počinje sa čistoćom! Profesionalno čišćenje bez kompromisa
         </h2>
-        <p className="text-background/90 font-medium md:text-[1.2rem] text-sm max-w-[700px] px-4">
+        <p className="text-background/90 font-medium md:text-[1.2rem] text-base max-w-[700px] px-4">
           Spremamo sve što vi ne stižete: stanove, kuće, lokale, poslovne prostore, 
           prostorije posle adaptacije i novogradnju
         </p>

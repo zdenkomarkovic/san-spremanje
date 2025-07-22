@@ -16,8 +16,7 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  // params je uvek dostupan kao objekat, ali za SSR/ISR može biti asinhron
-  const slug = typeof params.slug === "string" ? params.slug : await params.slug;
+  const slug = params.slug;
   const usluga = uslugeData.find(u => u.slug === slug);
   
   if (!usluga) {
@@ -41,8 +40,7 @@ export async function generateStaticParams() {
 }
 
 export default async function UslugaPage({ params }: Props) {
-  // params može biti asinhron u nekim edge slučajevima
-  const slug = typeof params.slug === "string" ? params.slug : await params.slug;
+  const slug = params.slug;
   const usluga = uslugeData.find(u => u.slug === slug);
 
   if (!usluga) {
