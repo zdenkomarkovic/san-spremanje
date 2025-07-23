@@ -43,17 +43,15 @@ export default function Footer() {
               </a>
             </div>
             <div>
-              <a href="mailto:info@sanspremanje.rs" target={"_blank"}>
+              <a href="mailto:osancanin1@gmail.com" target={"_blank"}>
                 <p className="text-wrap mx-auto md:mx-0 hover:scale-105 transition-all duration-300 w-fit">
-                  Email: info@sanspremanje.rs
+                  Email: osancanin1@gmail.com
                 </p>
               </a>
             </div>
             <div className="flex space-x-4 justify-center md:justify-start">
-                    <a href="#" target={"_blank"} className="hover:scale-110 transition-all duration-300">
-                <Facebook />
-              </a>
-              <a href="#" target={"_blank"} className="hover:scale-110 transition-all duration-300">
+
+              <a href="https://www.instagram.com/sanspremanje/" target={"_blank"} className="hover:scale-110 transition-all duration-300">
                 <Instagram />
               </a>
             </div>
