@@ -8,13 +8,7 @@ import UslugaWhenNeeded from "./UslugaWhenNeeded";
 import UslugaKontakt from "./UslugaKontakt";
 import UslugaBenefiti from "./UslugaBenefiti";
 
-interface Props {
-  params: {
-    slug: string;
-  };
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const slug = params.slug;
   const usluga = uslugeData.find(u => u.slug === slug);
   
@@ -38,7 +32,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function UslugaPage({ params }: Props) {
+export default async function UslugaPage({ params }: { params: { slug: string } }) {
   const slug = params.slug;
   const usluga = uslugeData.find(u => u.slug === slug);
 
