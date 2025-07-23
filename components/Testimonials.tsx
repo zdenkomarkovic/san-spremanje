@@ -23,7 +23,7 @@ import { FaStar, FaQuoteLeft } from "react-icons/fa";
 
 const Testemonials = () => {
   return (
-    <div className="py-16 container px-4 mx-auto bg-gradient-to-b from-gray-50 to-white">
+    <div className="py-8 my-8 container px-4 mx-auto bg-gradient-to-b from-gray-50 to-white">
       <motion.div 
         className="text-center mb-12"
         initial={{ opacity: 0, y: 20 }}
@@ -99,10 +99,7 @@ const TestemonialCard = ({ testimonial }: { testimonial: TestimonialData }) => {
                     // Fallback će se automatski prikazati ako slika ne postoji
                   }}
                 />
-                {/* Fallback inicijali ako slika ne postoji */}
-                <div className="absolute inset-0 flex items-center justify-center bg-primary/10 text-primary font-semibold text-sm">
-                  {testimonial.title.split(' ').map(n => n[0]).join('')}
-                </div>
+
               </div>
               <div>
                 <CardTitle className="text-lg font-semibold text-gray-800">

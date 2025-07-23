@@ -26,67 +26,75 @@ import { HoverCard, HoverCardTrigger, HoverCardContent } from "./ui/hover-card";
 
 const mobTitleStyles = "text-lg py-2";
 
-const MobileMenu = () => (
-  <Sheet>
-    <SheetTrigger className="lg:hidden">
-      <MenuIcon className="text-primary cursor-pointer" />
-    </SheetTrigger>
-    <SheetContent>
-      <SheetHeader>
-        <SheetTitle></SheetTitle>
-        <SheetContent>
-          <ul>
-            {navList.map((item, index) => {
-              if (item.list)
-                return (
-                  <Fragment key={index}>
-                    <Accordion type="single" collapsible>
-                      <AccordionItem className="border-none" value="item-1">
-                        <motion.div
-                          whileHover={{ color: "hsl(var(--primary))" }}
-                        >
-                          <AccordionTrigger
-                            className={`${mobTitleStyles} hover:no-underline`}
+const MobileMenu = () => {
+  const [open, setOpen] = useState(false);
+
+  // Funkcija za zatvaranje menija
+  const handleClose = () => setOpen(false);
+
+  return (
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger className="lg:hidden">
+        <MenuIcon className="text-primary cursor-pointer" />
+      </SheetTrigger>
+      <SheetContent>
+        <SheetHeader>
+          <SheetTitle></SheetTitle>
+          <SheetContent>
+            <ul>
+              {navList.map((item, index) => {
+                if (item.list)
+                  return (
+                    <Fragment key={index}>
+                      <Accordion type="single" collapsible>
+                        <AccordionItem className="border-none" value="item-1">
+                          <motion.div
+                            whileHover={{ color: "hsl(var(--primary))" }}
                           >
-                            {item.title}
-                          </AccordionTrigger>
-                        </motion.div>
-                        <AccordionContent>
-                          {item.list.map((link, index2) => (
-                            <Link
-                              className="pl-6 block font-light py-2"
-                              key={`${index}.${index2}`}
-                              href={link.link}
+                            <AccordionTrigger
+                              className={`${mobTitleStyles} hover:no-underline`}
                             >
-                              <motion.li
-                                whileHover={{ color: "hsl(var(--primary))" }}
+                              {item.title}
+                            </AccordionTrigger>
+                          </motion.div>
+                          <AccordionContent>
+                            {item.list.map((link, index2) => (
+                              <Link
+                                className="pl-6 block font-light py-2"
+                                key={`${index}.${index2}`}
+                                href={link.link}
+                                onClick={handleClose}
                               >
-                                {link.title}
-                              </motion.li>
-                            </Link>
-                          ))}
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  </Fragment>
+                                <motion.li
+                                  whileHover={{ color: "hsl(var(--primary))" }}
+                                >
+                                  {link.title}
+                                </motion.li>
+                              </Link>
+                            ))}
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    </Fragment>
+                  );
+                return (
+                  <Link key={index} href={item.link} onClick={handleClose}>
+                    <motion.li
+                      whileHover={{ color: "hsl(var(--primary))" }}
+                      className={mobTitleStyles}
+                    >
+                      <SheetTrigger>{item.title}</SheetTrigger>
+                    </motion.li>
+                  </Link>
                 );
-              return (
-                <Link key={index} href={item.link}>
-                  <motion.li
-                    whileHover={{ color: "hsl(var(--primary))" }}
-                    className={mobTitleStyles}
-                  >
-                    <SheetTrigger>{item.title}</SheetTrigger>
-                  </motion.li>
-                </Link>
-              );
-            })}
-          </ul>
-        </SheetContent>
-      </SheetHeader>
-    </SheetContent>
-  </Sheet>
-);
+              })}
+            </ul>
+          </SheetContent>
+        </SheetHeader>
+      </SheetContent>
+    </Sheet>
+  );
+};
 
 const DesktopNav = () => (
   <ul className="hidden gap-8 lg:flex  text-xl">
@@ -154,11 +162,11 @@ export default function Header() {
     <header
       className={`flex justify-center ${
         scrolled
-          ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md"
-          : "bg-transparent"
+          ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md text-primary"
+          : "bg-transparent text-white"
       }  fixed top-0 left-0 right-0 z-[10] transition-colors`}
     >
-      <nav className="flex items-center justify-between px-8 py-4 max-w-[80rem] w-full text-primary font-bold">
+      <nav className="flex items-center justify-between px-8 py-4 max-w-[80rem] w-full font-bold">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src={Logo}
@@ -166,7 +174,7 @@ export default function Header() {
             width={50}
             height={50}
             className="rounded-full"
-          /> San Spremanje
+          /> <span className="hidden md:block">San Spremanje</span> 
         </Link>
         <DesktopNav />
         <Link href="tel:+381656088870">
@@ -175,7 +183,7 @@ export default function Header() {
               color: "hsl(var(--foreground))",
               backgroundColor: "hsl(var(--primary))",
             }}
-            className=" items-center justify-center rounded-full text-primary border-primary border-2 text-sm md:text-lg py-1 px-2 md:py-2 md:px-4 transition-colors flex"
+            className={` items-center justify-center rounded-full ${scrolled ? "border-primary" : "border-white"} border-2 text-sm md:text-lg py-1 px-2 md:py-2 md:px-4 transition-colors flex`}
           >
             <PhoneIcon />
             <p className="">065 608 8870</p>

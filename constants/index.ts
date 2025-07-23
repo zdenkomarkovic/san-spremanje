@@ -114,35 +114,35 @@ export const testimonialData: TestimonialData[] = [
   {
     id: 1,
     title: "Marija S.",
-    image: "/manikam.png",
+    image: "/pexels-cottonbro-4855373.jpg",
     description:
       "San Spremanje je odličan izbor za čišćenje našeg stana! Tim je profesionalan, brz i pažljiv. Preporučujem svima koji traže kvalitetnu uslugu čišćenja u Novom Sadu.",
   },
   {
     id: 2,
     title: "Petar M.",
-    image: "/puric.jpg",
+    image: "/pexels-kampus-5920775.jpg",
     description:
       "Koristimo njihove usluge za čišćenje naše kancelarije već godinu dana. Redovno, pouzdano i uvek zadovoljni rezultatom. Atmosfera u kancelariji je sada mnogo prijatnija!",
   },
   {
     id: 3,
     title: "Ana K.",
-    image: "/slep puric.jpg",
+    image: "/pexels-olly-3783725.jpg",
     description:
       "Posle adaptacije stana trebalo nam je temeljno čišćenje. San Spremanje je uradio fantastičan posao - uklonili su svu prašinu i ostatke građevinskih materijala. Preporučujem!",
   },
   {
     id: 4,
     title: "Dragan N.",
-    image: "/puric slep.jpg",
+    image: "/pexels-apunto-group-agencia-de-publicidad-53086916-7752893.jpg",
     description:
       "Kao upravnik zgrade, mogu reći da je San Spremanje najbolji partner za održavanje čistoće zajedničkih prostora. Stanari su zadovoljni, a mi mirni.",
   },
   {
     id: 5,
     title: "Jelena R.",
-    image: "/manikam.png",
+    image: "/pexels-teona-swift-6873954.jpg",
     description:
       "Čišćenje novogradnje je bilo izazov, ali San Spremanje je savršeno obavio posao. Sada imamo čist i spreman stan za useljenje. Hvala!",
   },
@@ -186,7 +186,7 @@ export interface UslugaData {
   slug: string;
   title: string;
   shortDescription: string;
-  longDescription: string;
+  longDescription: string[];
   icon: IconType;
   image: string;
   features: string[];
@@ -202,11 +202,11 @@ export interface UslugaData {
 export const uslugeData: UslugaData[] = [
   {
     slug: "redovno-ciscenje",
-    title: "Redovno čišćenje stanova i kuća",
+    title: "Redovno čišćenje – Održavanje čistoće bez stresa",
     shortDescription: "Održavanje čistoće kroz redovne posete",
-    longDescription: "Redovno čišćenje je idealno rešenje za održavanje čistoće vašeg prostora bez ometanja vašeg dnevnog ritma. Naš tim prilagođava se vašim potrebama i rasporedu, osiguravajući konzistentnu čistoću kroz redovne posete.",
+    longDescription:[ "Redovno čišćenje je usluga namenjena svima koji žele da njihov prostor uvek bude uredan, bez potrebe da sami ulažu vreme i trud. Naš tim pruža profesionalno čišćenje stambenih i poslovnih prostora u terminima koji vama odgovaraju – dnevno, nedeljno ili po dogovoru.","Usluga uključuje usisavanje, brisanje prašine, čišćenje kupatila i kuhinje, pranje podova i praznjenje korpi. Po potrebi nudimo i dodatne usluge – poput pranja prozora ili peglanja. Redovno održavanje čistoće sprečava nakupljanje prljavštine i doprinosi zdravijem ambijentu.","Prepustite svakodnevne obaveze profesionalcima i uživajte u čistom i svežem prostoru tokom cele nedelje."],
     icon: FaBroom,
-    image: "/hero1.jpg",
+    image: "/redovnociscenje.jpg",
     features: [
       "Čišćenje svih površina (podovi, stolovi, police)",
       "Uklanjanje prašine sa svih površina",
@@ -231,11 +231,11 @@ export const uslugeData: UslugaData[] = [
   },
   {
     slug: "generalno-ciscenje",
-    title: "Generalno čišćenje stanova i kuća",
+    title: "Generalno čišćenje – Temeljna higijena vašeg prostora",
     shortDescription: "Temeljno čišćenje svih površina",
-    longDescription: "Generalno čišćenje je temeljno čišćenje svih površina, uključujući teško dostupna mesta koja se obično preskaču u redovnom čišćenju. Idealno je za periodično održavanje ili pripremu prostora za posebne prilike.",
+    longDescription: ["Generalno čišćenje predstavlja detaljnu i sveobuhvatnu higijensku uslugu koja obuhvata čišćenje svih površina, uključujući mesta koja se često zanemaruju tokom redovnog održavanja. Ova usluga uključuje dubinsko čišćenje iza i ispod nameštaja, stolarije, kuhinjskih i sanitarnih elemenata, kao i uklanjanje prašine, mrlja i nečistoća sa podova, stakala, zidova i plafona.","Idealno je za sezonsko čišćenje, pripremu prostora za proslave, selidbe ili nakon dužeg nekorišćenja. Naš tim koristi profesionalna sredstva i opremu, prilagođenu svakom tipu površine, kako bismo obezbedili besprekornu čistoću i svežinu vašeg prostora.","Bilo da se radi o stambenom ili poslovnom objektu, generalno čišćenje je ključ za zdravu i prijatnu atmosferu. Kontaktirajte nas i osigurajte dubinsku higijenu prostora – brzo, efikasno i profesionalno."],
     icon: MdCleaningServices,
-    image: "/hero2.jpg",
+    image: "/generalno.jpg",
     features: [
       "Temeljno čišćenje svih površina (podovi, zidovi, plafoni)",
       "Čišćenje nameštaja i električnih uređaja",
@@ -270,11 +270,11 @@ export const uslugeData: UslugaData[] = [
   },
   {
     slug: "ciscenje-stanova-i-kuca",
-    title: "Čišćenje stanova i kuća",
+    title: "Kompletno čišćenje stanova i kuća – Profesionalna higijena vašeg doma",
     shortDescription: "Kompletno čišćenje stambenih objekata",
-    longDescription: "Vaš dom je vaše utočište, a mi razumemo koliko je važno da bude čist i zdrav. Pružamo profesionalne usluge čišćenja stanova i kuća sa pažljivošću prema vašoj imovini i potrebama vaše porodice.",
+    longDescription: ["Kompletno čišćenje stambenih objekata obuhvata sve što je potrebno da vaš dom bude čist, uredan i prijatan za boravak. Naš tim profesionalaca pruža detaljno čišćenje stanova i kuća, uključujući podove, prozore, kuhinjske i sanitarne površine, kao i teško dostupna mesta.","Usluga je idealna za porodice sa decom, starije osobe, kao i za one koji žele da se oslobode obaveza održavanja doma. Koristimo profesionalna sredstva i efikasne metode, uz pažljivo rukovanje vašim nameštajem i ličnim stvarima.","Zakažite kompletno čišćenje i uživajte u prostoru koji odiše svežinom i higijenom."],
     icon: FaHome,
-    image: "/hero3.jpg",
+    image: "/ciscenje.jpg",
     features: [
       "Dnevne sobe i spavaće sobe",
       "Kuhinja i trpezarija",
@@ -299,11 +299,11 @@ export const uslugeData: UslugaData[] = [
   },
   {
     slug: "ciscenje-lokala-i-kancelarija",
-    title: "Čišćenje lokala i kancelarija",
+    title: "Profesionalno čišćenje poslovnih prostora – Održavanje poslovnog imidža",
     shortDescription: "Profesionalno čišćenje poslovnih prostora",
-    longDescription: "Prva utisak je najvažniji - to je zašto je čistoća vašeg poslovnog prostora ključna za održavanje profesionalne slike vaše kompanije. Pružamo specijalizovane usluge čišćenja lokala i kancelarija prilagođene poslovnim potrebama.",
+    longDescription: ["Uređen i čist poslovni prostor ostavlja snažan prvi utisak i podstiče produktivnost zaposlenih. Naša usluga profesionalnog čišćenja kancelarija i lokala obuhvata sve ključne zone: radne površine, podove, stakla, sanitarije i zajedničke prostore.","Radimo u terminima koji ne ometaju vaše poslovanje i nudimo fleksibilnost u pogledu obima i dinamike čišćenja – svakodnevno, nedeljno ili po dogovoru. Uz upotrebu profesionalne opreme i sredstava, garantujemo visok nivo higijene i urednosti.","Održavajte besprekoran izgled svog poslovnog prostora uz pouzdan i diskretan tim."],
     icon: MdBusinessCenter,
-    image: "/hero2.jpg",
+    image: "/poslovniprostori.jpg",
     features: [
       "Kancelarije i radne prostorije",
       "Recepcije i čekaonice",
@@ -328,11 +328,11 @@ export const uslugeData: UslugaData[] = [
   },
   {
     slug: "ciscenje-zgrada",
-    title: "Čišćenje zgrada",
+    title: "Čišćenje zajedničkih prostora u zgradama – Higijena koja utiče na sve stanare",
     shortDescription: "Čišćenje zajedničkih prostora zgrada",
-    longDescription: "Čistoća zajedničkih prostora je ključna za kvalitet života svih stanara. Pružamo kompletnu uslugu čišćenja zgrada koja obuhvata sve zajedničke prostore, od ulaza i stepeništa do fasada i okolnih površina.",
+    longDescription: ["Zajednički prostori u zgradama su svakodnevno korišćeni i prvi su kontakt sa objektom. Naš tim pruža kompletnu uslugu čišćenja ulaza, stepeništa, hodnika, liftova, prozora i fasada, kao i prilaza i dvorišta.","Redovno čišćenje zgrada doprinosi zdravijem okruženju, sprečava nakupljanje prljavštine i produžava životni vek površina. Uslugu prilagođavamo rasporedu i budžetu stanara, uz transparentan i dogovoren pristup.","Vaša zgrada zaslužuje da bude čista i reprezentativna – prepustite to nama."],
     icon: FaBuilding,
-    image: "/hero1.jpg",
+    image: "/zgrade.jpg",
     features: [
       "Ulazi i foyeri",
       "Stepeništa i hodnici",
@@ -359,9 +359,9 @@ export const uslugeData: UslugaData[] = [
     slug: "ciscenje-posle-adaptacija",
     title: "Čišćenje posle adaptacija i renoviranja",
     shortDescription: "Specijalizovano čišćenje posle građevinskih radova",
-    longDescription: "Građevinski radovi ostavljaju za sobom ogromnu količinu prašine, ostataka materijala i građevinskog otpada. Naš tim je specijalizovan za čišćenje posle adaptacija i renoviranja, koristeći profesionalnu opremu i tehnike.",
+    longDescription: ["Građevinski i zanatski radovi ostavljaju za sobom slojeve prašine i ostatke materijala koje je teško ukloniti bez profesionalne pomoći. Naš tim nudi kompletno čišćenje nakon radova – uključujući detaljno usisavanje, uklanjanje tragova maltera, lepkova i boje, kao i dezinfekciju prostora.","Koristimo snažnu opremu i efikasna sredstva kako bismo obezbedili brz i precizan rezultat. Prostor ostaje čist, bezbedan i spreman za dalju upotrebu ili useljenje.","Nakon radova – mi završavamo posao do kraja."],
     icon: FaTools,
-    image: "/hero3.jpg",
+    image: "/renoviranje.jpg",
     features: [
       "Uklanjanje građevinskog otpada",
       "Čišćenje prašine sa svih površina",
@@ -397,9 +397,9 @@ export const uslugeData: UslugaData[] = [
     slug: "ciscenje-novogradnje",
     title: "Čišćenje novogradnje",
     shortDescription: "Kompletna završna higijena pre useljenja",
-    longDescription: "Novogradnja zahteva posebnu pažnju kada je u pitanju čišćenje. Građevinski radovi ostavljaju za sobom prašinu, ostatke materijala i građevinski otpad koji mora biti potpuno uklonjen pre useljenja.",
+    longDescription: ["Pre nego što se uselite u novi ili renovirani prostor, važno je obezbediti dubinsku higijenu. Završno čišćenje pre useljenja podrazumeva uklanjanje građevinske prašine, tragova lepkova, boje i svih ostataka radova, kako bi vaš dom bio potpuno spreman za život.","Naš tim detaljno čisti sve površine – od prozora i stolarije do sanitarija i kuhinje. Koristimo profesionalne mašine i sredstva koja garantuju besprekornu čistoću i svežinu.","Uselite se u čist, zdrav i uredan prostor – bez dodatnog stresa i obaveza."],
     icon: FaHome,
-    image: "/hero1.jpg",
+    image: "/novogradnja.jpg",
     features: [
       "Uklanjanje građevinskog otpada",
       "Čišćenje prašine sa svih površina",

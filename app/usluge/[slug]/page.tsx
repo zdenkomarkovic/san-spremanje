@@ -3,11 +3,10 @@ import { notFound } from "next/navigation";
 import { uslugeData } from "@/constants";
 import UslugaHeader from "./UslugaHeader";
 import UslugaOpis from "./UslugaOpis";
-import UslugaBenefiti from "./UslugaBenefiti";
 import UslugaFeatures from "./UslugaFeatures";
 import UslugaWhenNeeded from "./UslugaWhenNeeded";
-import UslugaPrednosti from "./UslugaPrednosti";
 import UslugaKontakt from "./UslugaKontakt";
+import UslugaBenefiti from "./UslugaBenefiti";
 
 interface Props {
   params: {
@@ -48,14 +47,15 @@ export default async function UslugaPage({ params }: Props) {
   }
 
   return (
-    <div className="w-full py-20 px-4">
+    <div className=" pt-20 pb-6">
+    <div className="container mx-auto px-2 md:px-4">
       <UslugaHeader title={usluga.title} />
       <UslugaOpis image={usluga.image} title={usluga.title} shortDescription={usluga.shortDescription} longDescription={usluga.longDescription} />
       <UslugaBenefiti benefits={usluga.benefits} />
+    </div>
+      <UslugaKontakt />
       <UslugaFeatures title={usluga.title} features={usluga.features} />
       {usluga.whenNeeded && <UslugaWhenNeeded title={usluga.title} whenNeeded={usluga.whenNeeded} />}
-      <UslugaPrednosti title={usluga.title} />
-      <UslugaKontakt />
     </div>
   );
 } 

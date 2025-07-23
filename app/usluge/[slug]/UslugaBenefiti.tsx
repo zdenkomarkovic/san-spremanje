@@ -9,7 +9,7 @@ const icons = [FaBroom, FaClock, FaStar, FaShieldAlt];
 
 export default function UslugaBenefiti({ benefits }: UslugaBenefitiProps) {
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 py-2 md:py-4">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 my-8 py-2 md:py-4">
       {benefits.map((benefit, index) => {
         const Icon = icons[index] || FaStar;
         return (

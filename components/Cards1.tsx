@@ -6,7 +6,7 @@ const Cards1 = ({ title, data }: { title: string; data: Cards1Data[] }) => {
   return (
     <div className="">
       <div className="container px-5 mx-auto py-10 md:py-20 border-t-2 space-y-10 md:space-y-20">
-        <h2 className="text-4xl md:text-5xl text-center text-primary font-bold">
+        <h2 className="font-bold">
           {title}
         </h2>
         <div className="grid md:grid-cols-4 text-center gap-6 md:gap-8 items-stretch">
@@ -31,12 +31,12 @@ const OneCard = ({ item }: { item: Cards1Data }) => {
   return (
     <Card className="h-full">
       <CardHeader>
-        <div className="mx-auto text-4xl md:text-6xl text-primary md:pb-5">
+        <div className="mx-auto text-4xl md:text-6xl text-primary md:pb-3">
           <IconComponent />
         </div>
         <CardTitle className="text-2xl md:text-3xl">{item.title}</CardTitle>
       </CardHeader>
-      <CardContent className="text-lg md:text-xl">
+      <CardContent className="">
         <p>{item.text}</p>
       </CardContent>
     </Card>

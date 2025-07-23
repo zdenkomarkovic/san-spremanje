@@ -1,15 +1,24 @@
 "use client";
 
 import Image from "next/image";
+import about from "../public/about.jpg";
 
 const About = () => {
-  return (
-    <div className="container px-2 md:px-4 mx-auto py-7 md:py-12 space-y-5 flex flex-col md:flex-row items-center gap-10">
-      <div className="flex-1 space-y-10">
-        <h2 className="">
+  return (<div className="relative">
+      <Image
+    src="/bg.jpg"
+    alt="San Spremanje"
+    fill
+    className="object-[80%_center] md:object-center object-cover h-full w-full z-0"
+    priority
+  />
+    <div className="container relative px-2 md:px-4 mx-auto py-7 md:py-12 space-y-5 z-[1] flex flex-col md:flex-row items-center gap-10 text-white">
+     
+      <div className=" space-y-10">
+        <h2 className="text-white z-[1]">
           San Spremanje – Jer sve počinje sa čistoćom!
         </h2>
-   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+   <div className="grid grid-cols-1 md:grid-cols-2 items-center">
     <div className="flex flex-col gap-4">
          <p className=" first-letter:pl-6">
           San Spremanje je vaš pouzdani partner za profesionalno čišćenje u Novom Sadu i okolini. 
@@ -34,13 +43,13 @@ const About = () => {
           </div> 
            
                  <div className="">
-        <Image
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+        {/* <Image
+          src={about}
           alt="Profesionalno čišćenje - San Spremanje"
           width={500}
           height={500}
           className="rounded-2xl w-full shadow-lg object-cover"
-        />
+        /> */}
       </div> </div> 
         <div className="space-y-5 block">
 
@@ -54,6 +63,7 @@ const About = () => {
         </div>
       </div>
 
+    </div>
     </div>
   );
 };

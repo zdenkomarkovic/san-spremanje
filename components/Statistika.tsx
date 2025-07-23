@@ -8,7 +8,7 @@ const Statistika = () => {
 
   return (
     <section ref={ref} className="bg-white py-12 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-primary mb-16">Naši rezultati govore...</h2>
+      <h2 className=" mb-16">Naši rezultati govore...</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-5xl mx-auto">
         <div>
           <p className="text-4xl md:text-5xl font-bold text-primary">

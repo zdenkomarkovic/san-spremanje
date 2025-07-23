@@ -57,7 +57,7 @@ export default function Contact() {
   };
   return (
     <div className="">
-      <div className="container mx-auto pt-28 pb-16 px-6 md:px-8 md:py-32 space-y-12 md:space-y-24">
+      <div className="container mx-auto pt-28 pb-16 px-6 md:px-20 md:py-32 space-y-12 md:space-y-24">
         <h1 className="text-2xl md:text-5xl pl-2 md:px-32">
           Kontakt - San Spremanje
         </h1>
@@ -125,14 +125,7 @@ export default function Contact() {
                 </button>
               </a>
             </div>
-            <div className="pl-4 md:pl-7 pt-4 lg:pt-12">
-              <h3 className="text-xl font-semibold text-primary mb-4">
-                Radno vreme
-              </h3>
-              <p className="text-lg">Pon-Pet: 08:00 - 18:00</p>
-              <p className="text-lg">Subota: 08:00 - 16:00</p>
-              <p className="text-lg">Nedelja: Po dogovoru</p>
-            </div>
+            
           </div>
           <div className="mx-2 md:mx-20 rounded-3xl ">
             <Form {...form}>

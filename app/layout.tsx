@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   title: "San Spremanje - Profesionalno čišćenje stanova, kuća i poslovnih prostora | Novi Sad",
   description: "San Spremanje pruža profesionalne usluge čišćenja stanova, kuća, lokala i poslovnih prostora u Novom Sadu i okolini. Redovno i generalno čišćenje, čišćenje posle adaptacija i novogradnje.",
   icons: {
-    icon: "/manikam.png",
-    apple: "/manikam.png",
+    icon: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
   },
   keywords: ["čišćenje", "san spremanje", "čišćenje stanova", "čišćenje kuća", "čišćenje lokala", "čišćenje poslovnih prostora", "čišćenje zgrada", "čišćenje posle adaptacije", "čišćenje novogradnje", "profesionalno čišćenje", "Novi Sad", "redovno čišćenje", "generalno čišćenje"],
   alternates: {
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="sr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-muted-foreground bg-muted  text-lg md:text-2xl`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-muted-foreground bg-muted  text-lg md:text-xl`}
       >
         <Header />
         {children}

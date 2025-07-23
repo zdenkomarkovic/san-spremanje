@@ -17,7 +17,7 @@ const Hero = () => {
         priority
       />
       <div className="relative flex flex-col gap-6 w-full items-center justify-center text-white z-[1] text-center">
-        <h1 className="">
+        <h1 className="text-white">
           San Spremanje
         </h1>
         <h2 className="text-background font-medium md:text-[1.5rem] text-lg max-w-[800px] px-4">
