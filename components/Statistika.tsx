@@ -12,7 +12,7 @@ const Statistika = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-5xl mx-auto">
         <div>
           <p className="text-4xl md:text-5xl font-bold text-primary">
-            {inView && <CountUp end={5} duration={2} suffix="+" />}
+            {inView && <CountUp end={27} duration={2} suffix="+" />}
           </p>
           <p className="mt-2">Godina iskustva</p>
         </div>
