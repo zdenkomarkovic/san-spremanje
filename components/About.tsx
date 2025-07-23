@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import about from "../public/about.jpg";
 
 const About = () => {
   return (<div className="relative">
