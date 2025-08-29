@@ -16,15 +16,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "San Spremanje - Profesionalno čišćenje stanova, kuća i poslovnih prostora | Novi Sad",
-  description: "San Spremanje pruža profesionalne usluge čišćenja stanova, kuća, lokala i poslovnih prostora u Novom Sadu i okolini. Redovno i generalno čišćenje, čišćenje posle adaptacija i novogradnje.",
+  title:
+    "San Spremanje - Profesionalno čišćenje stanova, kuća i poslovnih prostora | Novi Sad",
+  description:
+    "San Spremanje pruža profesionalne usluge čišćenja stanova, kuća, lokala i poslovnih prostora u Novom Sadu i okolini. Redovno i generalno čišćenje, čišćenje posle adaptacija i novogradnje.",
   icons: {
-    icon: "/favicon-16x16.png",
+    icon: "/16x16.png",
     apple: "/apple-touch-icon.png",
   },
-  keywords: ["čišćenje", "san spremanje", "čišćenje stanova", "čišćenje kuća", "čišćenje lokala", "čišćenje poslovnih prostora", "čišćenje zgrada", "čišćenje posle adaptacije", "čišćenje novogradnje", "profesionalno čišćenje", "Novi Sad", "redovno čišćenje", "generalno čišćenje"],
+  keywords: [
+    "čišćenje",
+    "san spremanje",
+    "čišćenje stanova",
+    "čišćenje kuća",
+    "čišćenje lokala",
+    "čišćenje poslovnih prostora",
+    "čišćenje zgrada",
+    "čišćenje posle adaptacije",
+    "čišćenje novogradnje",
+    "profesionalno čišćenje",
+    "Novi Sad",
+    "redovno čišćenje",
+    "generalno čišćenje",
+  ],
   alternates: {
-    canonical: "https://sanspremanje.rs/",
+    canonical: "https://www.ciscenjenovisad.rs/",
   },
 };
 
