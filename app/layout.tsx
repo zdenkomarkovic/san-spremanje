@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -51,6 +52,34 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sr">
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17759228735"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17759228735');
+        `}
+      </Script>
+      <Script id="google-ads-conversion" strategy="afterInteractive">
+        {`
+          function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17759228735/3r0yCImo0ckbEL-moZRC',
+                'event_callback': callback
+            });
+            return false;
+          }
+        `}
+      </Script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-muted-foreground bg-muted  text-lg md:text-xl`}
       >

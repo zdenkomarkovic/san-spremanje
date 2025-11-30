@@ -38,7 +38,14 @@ export default function Footer() {
           <div className="space-y-3 pb-5 md:pb-0">
             <div>
               {" "}
-              <a href="tel:+381656088870">
+              <a
+                href="tel:+381656088870"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                    (window as any).gtag_report_conversion('tel:+381656088870');
+                  }
+                }}
+              >
                 <p className="mx-auto md:mx-0 hover:scale-105 transition-all duration-300 w-fit">Telefon: 065 608 8870</p>
               </a>
             </div>

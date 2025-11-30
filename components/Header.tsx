@@ -177,7 +177,14 @@ export default function Header() {
           /> <span className="hidden md:block">San Spremanje</span> 
         </Link>
         <DesktopNav />
-        <Link href="tel:+381656088870">
+        <a
+          href="tel:+381656088870"
+          onClick={() => {
+            if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+              (window as any).gtag_report_conversion('tel:+381656088870');
+            }
+          }}
+        >
           <motion.button
             whileHover={{
               color: "hsl(var(--foreground))",
@@ -188,7 +195,7 @@ export default function Header() {
             <PhoneIcon />
             <p className="">065 608 8870</p>
           </motion.button>
-        </Link>
+        </a>
         <MobileMenu />
       </nav>
     </header>
