@@ -16,8 +16,8 @@ export default function Cta() {
         <a
           href="tel:+381656088870"
           onClick={() => {
-            if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-              (window as any).gtag_report_conversion('tel:+381656088870');
+            if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+              window.gtag_report_conversion('tel:+381656088870');
             }
           }}
           className="px-6 py-3 h-fit text-nowrap bg-white text-primary rounded-lg font-semibold hover:bg-primary/90 transition-colors"

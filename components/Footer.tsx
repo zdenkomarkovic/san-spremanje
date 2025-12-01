@@ -41,8 +41,8 @@ export default function Footer() {
               <a
                 href="tel:+381656088870"
                 onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                    (window as any).gtag_report_conversion('tel:+381656088870');
+                  if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                    window.gtag_report_conversion('tel:+381656088870');
                   }
                 }}
               >

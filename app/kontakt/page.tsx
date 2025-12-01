@@ -67,8 +67,8 @@ export default function Contact() {
               <a
                 href="tel:+381656088870"
                 onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                    (window as any).gtag_report_conversion('tel:+381656088870');
+                  if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                    window.gtag_report_conversion('tel:+381656088870');
                   }
                 }}
                 className="py-[7px] flex border-b-[1px] border-primary"
@@ -81,8 +81,8 @@ export default function Contact() {
               <a
                 href="viber://chat?number=%2B381656088870"
                 onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                    (window as any).gtag_report_conversion('viber://chat?number=%2B381656088870');
+                  if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                    window.gtag_report_conversion('viber://chat?number=%2B381656088870');
                   }
                 }}
                 className="py-[7px] flex border-b-[1px] border-primary"
@@ -95,8 +95,8 @@ export default function Contact() {
               <a
                 href="https://wa.me/381656088870"
                 onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                    (window as any).gtag_report_conversion('https://wa.me/381656088870');
+                  if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                    window.gtag_report_conversion('https://wa.me/381656088870');
                   }
                 }}
                 className="py-[7px] flex border-b-[1px] border-primary"
