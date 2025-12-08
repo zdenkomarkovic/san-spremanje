@@ -67,8 +67,11 @@ export default function Contact() {
               <a
                 href="tel:+381656088870"
                 onClick={() => {
-                  if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-                    window.gtag_report_conversion('tel:+381656088870');
+                  if (
+                    typeof window !== "undefined" &&
+                    window.gtag_report_conversion
+                  ) {
+                    window.gtag_report_conversion("tel:+381656088870");
                   }
                 }}
                 className="py-[7px] flex border-b-[1px] border-primary"
@@ -81,8 +84,13 @@ export default function Contact() {
               <a
                 href="viber://chat?number=%2B381656088870"
                 onClick={() => {
-                  if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-                    window.gtag_report_conversion('viber://chat?number=%2B381656088870');
+                  if (
+                    typeof window !== "undefined" &&
+                    window.gtag_report_conversion
+                  ) {
+                    window.gtag_report_conversion(
+                      "viber://chat?number=%2B381656088870"
+                    );
                   }
                 }}
                 className="py-[7px] flex border-b-[1px] border-primary"
@@ -95,8 +103,11 @@ export default function Contact() {
               <a
                 href="https://wa.me/381656088870"
                 onClick={() => {
-                  if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-                    window.gtag_report_conversion('https://wa.me/381656088870');
+                  if (
+                    typeof window !== "undefined" &&
+                    window.gtag_report_conversion
+                  ) {
+                    window.gtag_report_conversion("https://wa.me/381656088870");
                   }
                 }}
                 className="py-[7px] flex border-b-[1px] border-primary"
@@ -111,8 +122,7 @@ export default function Contact() {
                 className="py-[7px] flex border-b-[1px] border-primary"
               >
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
-                  <Mail className=" w-[28px] h-[28px]" />{" "}
-                  osancanin1@gmail.com
+                  <Mail className=" w-[28px] h-[28px]" /> osancanin1@gmail.com
                 </button>
               </a>
               <a
@@ -127,9 +137,7 @@ export default function Contact() {
                   sanspremanje
                 </button>
               </a>
-            
             </div>
-            
           </div>
           <div className="mx-2 md:mx-20 rounded-3xl ">
             <Form {...form}>
@@ -221,8 +229,9 @@ export default function Contact() {
             </Form>
           </div>
         </div>
+
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92892.91707130236!2d21.810959218314256!3d43.316276176269426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4755b0c240c81f65%3A0x56319fe3122ac3cd!2zTmnFoQ!5e0!3m2!1sen!2srs!4v1738712533479!5m2!1sen!2srs"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53438.30085715047!2d19.796357467311026!3d45.25780709141224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b10613de93455%3A0xb6f7d683724fe28!2z0J3QvtCy0Lgg0KHQsNC0!5e0!3m2!1ssr!2srs!4v1765156452218!5m2!1ssr!2srs"
           width="600"
           height="450"
           style={{ border: "0" }}
