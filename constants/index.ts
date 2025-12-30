@@ -49,6 +49,10 @@ export const navList = [
     ],
   },
   {
+    title: "Cenovnik",
+    link: "/cenovnik",
+  },
+  {
     title: "O nama",
     link: "/o-nama",
   },

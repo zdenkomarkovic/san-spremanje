@@ -160,10 +160,10 @@ export default function Header() {
 
   return (
     <header
-      className={`flex justify-center ${
+      className={`flex justify-center text-primary ${
         scrolled
-          ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md text-primary"
-          : "bg-transparent text-white"
+          ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md"
+          : "bg-transparent"
       }  fixed top-0 left-0 right-0 z-[10] transition-colors`}
     >
       <nav className="flex items-center justify-between px-8 py-4 max-w-[80rem] w-full font-bold">
@@ -174,14 +174,18 @@ export default function Header() {
             width={50}
             height={50}
             className="rounded-full"
-          /> <span className="hidden md:block">San Spremanje</span> 
+          />{" "}
+          <span className="hidden md:block">San Spremanje</span>
         </Link>
         <DesktopNav />
         <a
           href="tel:+381656088870"
           onClick={() => {
-            if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-              window.gtag_report_conversion('tel:+381656088870');
+            if (
+              typeof window !== "undefined" &&
+              window.gtag_report_conversion
+            ) {
+              window.gtag_report_conversion("tel:+381656088870");
             }
           }}
         >
@@ -190,7 +194,7 @@ export default function Header() {
               color: "hsl(var(--foreground))",
               backgroundColor: "hsl(var(--primary))",
             }}
-            className={` items-center justify-center rounded-full ${scrolled ? "border-primary" : "border-white"} border-2 text-sm md:text-lg py-1 px-2 md:py-2 md:px-4 transition-colors flex`}
+            className={` items-center justify-center rounded-full border-primary border-2 text-sm md:text-lg py-1 px-2 md:py-2 md:px-4 transition-colors flex`}
           >
             <PhoneIcon />
             <p className="">065 608 8870</p>
